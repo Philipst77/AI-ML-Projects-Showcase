@@ -1,36 +1,53 @@
-# Netflix Stock Prediction Using Linear Regression  
+<h1 align="center">Netflix Stock Prediction Using Linear Regression</h1>
 
-## A Predictive Model for Netflix Stock Prices  
+<h3 align="center">A Predictive Model for Netflix Stock Prices</h3>
 
-Netflix Stock Prediction Using Linear Regression is a project focusing on building a predictive model for Netflix stock prices using historical trading data. This project leverages linear regression and a custom gradient descent algorithm to forecast closing prices based on trading volume trends.  
+<p align="center">
+Netflix Stock Prediction Using Linear Regression is a project focusing on building a predictive model for Netflix stock prices using historical trading data. This project leverages <strong>linear regression</strong> and a <strong>custom gradient descent algorithm</strong> to forecast closing prices based on trading volume trends.
+</p>
 
-**This is NOT intended for real-time stock trading or financial advice, but rather as a demonstration of machine learning concepts and techniques.**  
+<p align="center">
+<b>This is NOT intended for real-time stock trading or financial advice, but rather as a demonstration of machine learning concepts and techniques.</b>
+</p>
 
-## Features  
+---
 
-- Predict Netflix's closing stock prices using trading volume as input  
-- Generate insights through graphical visualization of stock trends and prediction accuracy  
-- Optimize regression outcomes using a custom gradient descent algorithm  
-- Incorporate iterative loss minimization and parameter updates  
-- Experiment with learning rates and epochs for enhanced accuracy  
+<h2>Features</h2>
 
-Netflix Stock Prediction is a machine learning project designed to showcase the application of linear regression techniques for financial data analysis. Using Python libraries such as pandas and matplotlib, the project visualizes trends and demonstrates predictions effectively.  
+<ul>
+  <li>Predict Netflix's closing stock prices using trading volume as input</li>
+  <li>Generate insights through graphical visualization of stock trends and prediction accuracy</li>
+  <li>Optimize regression outcomes using a custom gradient descent algorithm</li>
+  <li>Incorporate iterative loss minimization and parameter updates</li>
+  <li>Experiment with learning rates and epochs for enhanced accuracy</li>
+</ul>
 
-## Tools  
+<p>
+Netflix Stock Prediction is a machine learning project designed to showcase the application of linear regression techniques for financial data analysis. Using Python libraries such as pandas and matplotlib, the project visualizes trends and demonstrates predictions effectively.
+</p>
 
-Netflix Stock Prediction uses a number of open-source tools to work properly:  
+---
 
-- **Python** - Programming language used for development  
-- **pandas** - Library for data manipulation and analysis  
-- **matplotlib** - Library for creating visualizations  
-- **Gradient Descent** - Custom implementation for optimizing regression parameters  
-- **Linear Regression** - Core algorithm for predictive modeling  
-- **GitHub** - Version control and repository hosting  
-- **Linux** - Environment for development and testing  
+<h2>Tools</h2>
 
-## Running the Program  
+<ul>
+  <li><strong>Python</strong> - Programming language used for development</li>
+  <li><strong>pandas</strong> - Library for data manipulation and analysis</li>
+  <li><strong>matplotlib</strong> - Library for creating visualizations</li>
+  <li><strong>Gradient Descent</strong> - Custom implementation for optimizing regression parameters</li>
+  <li><strong>Linear Regression</strong> - Core algorithm for predictive modeling</li>
+  <li><strong>GitHub</strong> - Version control and repository hosting</li>
+  <li><strong>Linux</strong> - Environment for development and testing</li>
+</ul>
 
-Run the Python program and follow the prompts for data input and model training. Ensure that the required Python libraries are installed before execution.  
+---
 
-```bash
+<h2>Running the Program</h2>
+
+<p>Run the Python program and follow the prompts for data input and model training. Ensure that the required Python libraries are installed before execution.</p>
+
+<pre>
+<code>
 python3 Netflix_Stock_Prediction.py
+</code>
+</pre>
