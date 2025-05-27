@@ -49,18 +49,17 @@ Make sure Python 3 is installed and run:
 ```bash
 pip install pandas matplotlib seaborn chainconsumer
 
-
+```
+---
 🚀 How to Run
-bash
-Copy
-Edit
+
 python3 data_exploration.py
 python3 scatter.py
 python3 correlation.py
 python3 histograms.py
 python3 probabilityDist.py
 
-
+---
 🎯 Project Goals
 Practice data cleaning and structural exploration
 
