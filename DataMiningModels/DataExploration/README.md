@@ -53,7 +53,7 @@ pip install pandas matplotlib seaborn chainconsumer
 ---
 🚀 How to Run
 
-python3 data_exploration.py
+-- python3 data_exploration.py
 python3 scatter.py
 python3 correlation.py
 python3 histograms.py
