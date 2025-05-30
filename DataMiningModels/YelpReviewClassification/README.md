@@ -24,27 +24,23 @@ Each row in `new_train.csv` follows the format:
 
 ---
 
+
 ## 🧠 Key Steps
 
-1. **Preprocessing:**
-   - Lowercasing
-   - Punctuation removal
-   - Tokenization
-   - Stopword removal
-   - TF-IDF vectorization
+1. **Text Vectorization:**
+   - Used `TfidfVectorizer` from scikit-learn
+   - Limited to `max_features=1000` for performance
 
 2. **Model:**
-   - Custom implementation of KNN
-   - Experimented with various distance metrics:
-     - Cosine similarity
-     - Euclidean distance (on dense vectors)
-     - Jaccard similarity (on binary bag-of-words)
-   - Optimized `k` value using 5-fold cross-validation
+   - Custom implementation of KNN using cosine similarity
+   - Used `numpy` for efficient vectorized computation
+   - Precomputed vector norms to avoid repeated calculations
+   - Selected best `k` using 10-fold cross-validation on training data
 
 3. **Evaluation:**
-   - Accuracy metric
-   - Validation on hold-out data
-   - Generated prediction file for test set matching `format.csv`
+   - Predictions generated for 18,000 test examples
+   - Output saved in `my_predictions.csv` (matching `format.csv`)
+
 
 ---
 
