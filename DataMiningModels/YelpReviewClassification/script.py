@@ -3,6 +3,7 @@ import math
 import csv
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
+import random 
 
 def load_and_vectorize(train_file, test_file):
     trvectors= []
@@ -29,8 +30,52 @@ def load_and_vectorize(train_file, test_file):
 
     return X_train, labels, X_test
 
-def crossValidation():
-    return
+def k10foldcrossValidation(trvectors ,labels, k_values):
+    combined = list(zip(trvectors, labels))  
+    random.shuffle(combined)  
+    
+    fold_size = len(combined) // 10 
+    
+    folds = [] 
+
+    for i in range(10):
+        start_index = i * fold_size
+        end_index = (i + 1) * fold_size
+        fold = combined[start_index:end_index]
+        folds.append(fold)  
+          
+    kvalues_accuracies = {} 
+    
+    for k in k_values:
+        total_correct = 0
+        total_predictions = 0
+        
+        for i in range(10):   
+            validation = folds[i]
+            training = []
+            for j in range(10):
+                if j != i:
+                 for item in folds[j]:
+                     training.append(item)
+                                 
+            train_vectors = [x[0] for x in training]
+            train_labels = [x[1] for x in training]
+            val_vectors = [x[0] for x in validation]
+            val_labels = [x[1] for x in validation]
+            
+            predictions = knn(train_vectors, val_vectors, train_labels, k)
+            
+            correct = sum(1 for pred, actual in zip(predictions, val_labels) if pred == actual)
+            total_correct += correct
+            total_predictions += len(val_labels)
+        
+        accuracy = total_correct / total_predictions
+        kvalues_accuracies[k] = accuracy
+        print(f"k={k}, accuracy={accuracy:.4f}")
+    
+    best_k = max(kvalues_accuracies, key=kvalues_accuracies.get)
+    print(f"Best k based on 10 fold CV: {best_k}")
+    return best_k
 
 
 def euclidean_Distance (x,y):
@@ -59,12 +104,15 @@ def main ():
     train_file = 'new_train.csv'
     test_file = 'new_test.csv'
     output_file = 'my_predictions.csv'
-    k = 5
+    
     
     trvectors, labels, tstvectors = load_and_vectorize(train_file, test_file)
-    trvectors = trvectors[:1000]
-    labels = labels[:1000]
-    tstvectors = tstvectors[:100]
+    
+    k_values = [1, 3, 5, 7, 9]  
+    best_k = k10foldcrossValidation(trvectors, labels, k_values)
+    k = best_k
+
+    
 
     predictions = knn(trvectors, tstvectors, labels, k)
     print("Predicted", len(predictions), "labels.")
