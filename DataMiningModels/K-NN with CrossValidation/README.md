@@ -53,36 +53,6 @@ Each row in `new_train.csv` follows the format:
 
 ---
 
-## 📦 Structure
-
-```
-├── src/
-│ ├── knn.py # Custom KNN implementation
-│ ├── preprocess.py # Text preprocessing pipeline
-│ ├── vectorize.py # TF-IDF and BoW functions
-│ ├── train.py # Model training and validation
-│ ├── predict.py # Generate predictions for test set
-│ └── utils.py # Helper functions
-│
-├── Report/
-│ └── report.pdf # Final write-up with approach, results, and insights
-│
-├── new_train.csv
-├── new_test.csv
-├── format.csv
-├── predictions.csv # Output predictions for test set
-└── README.md
-
-```
-
-
-
-
-
-
-
----
-
 ## ✅ Output
 
 Final predictions are stored in `predictions.csv` and follow the format of `format.csv` (i.e., 18,000 rows, each row is either `+1` or `-1`).
