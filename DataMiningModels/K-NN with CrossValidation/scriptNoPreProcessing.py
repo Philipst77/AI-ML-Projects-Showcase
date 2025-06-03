@@ -1,3 +1,8 @@
+import re
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
 import numpy as np
 import math 
 import csv
@@ -5,6 +10,29 @@ from collections import Counter
 import random 
 random.seed(42)
 np.random.seed(42)
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+
+
+nltk.download('punkt')
+nltk.download('stopwords')
+
+stop_words = set(stopwords.words('english'))
+stemmer = PorterStemmer()
+
+def preprocess_text(text):
+    text = text.lower()
+
+    text = re.sub(r'[^a-z\s]', '', text)
+
+    tokens = word_tokenize(text)
+
+    cleaned_tokens = [stemmer.stem(word) for word in tokens if word not in stop_words]
+
+    return ' '.join(cleaned_tokens)
+
+
+
 
 
 def load_and_vectorize(train_file, test_file):
@@ -23,8 +51,7 @@ def load_and_vectorize(train_file, test_file):
         for row in reader:
             tstvectors.append(row[0])
 
-    from sklearn.feature_extraction.text import TfidfVectorizer
-    vectorizer = TfidfVectorizer(max_features=1000)
+    vectorizer = TfidfVectorizer(max_features=1000,  preprocessor=preprocess_text)
     X_train = vectorizer.fit_transform(trvectors).toarray()
     X_test = vectorizer.transform(tstvectors).toarray()
 
