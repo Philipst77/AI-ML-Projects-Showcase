@@ -14,27 +14,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 
-nltk.download('punkt')
-nltk.download('stopwords')
-
-stop_words = set(stopwords.words('english'))
-stemmer = PorterStemmer()
-
-def preprocess_text(text):
-    text = text.lower()
-
-    text = re.sub(r'[^a-z\s]', '', text)
-
-    tokens = word_tokenize(text)
-
-    cleaned_tokens = [stemmer.stem(word) for word in tokens if word not in stop_words]
-
-    return ' '.join(cleaned_tokens)
-
-
-
-
-
 def load_and_vectorize(train_file, test_file):
     trvectors = []
     labels = []
@@ -51,7 +30,7 @@ def load_and_vectorize(train_file, test_file):
         for row in reader:
             tstvectors.append(row[0])
 
-    vectorizer = TfidfVectorizer(max_features=1000,  preprocessor=preprocess_text)
+    vectorizer = TfidfVectorizer(max_features=1000)
     X_train = vectorizer.fit_transform(trvectors).toarray()
     X_test = vectorizer.transform(tstvectors).toarray()
 
