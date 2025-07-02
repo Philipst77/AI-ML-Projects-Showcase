@@ -15,12 +15,17 @@ def process_truth_file(input_file, output_file):
 
     return odd_count
 
-# Specify the paths to your input and output files
-input_path = 'ground_truth_labels.txt'
-output_path = 'truth-odd-even.txt'
+def convertToOddEven(predictions):
+    return [1 if p % 2 == 1 else 0 for p in predictions]
 
-# Call the function with the file paths
-odd_count = process_truth_file(input_path, output_path)
+if __name__ == "__main__":
+
+# Specify the paths to your input and output files
+    input_path = 'ground_truth_labels.txt'
+    output_path = 'truth-odd-even.txt'
+
+ #Call the function with the file paths
+    odd_count = process_truth_file(input_path, output_path)
 
 # Output the count of odd numbers
-#print(f'Number of odd numbers: {odd_count}')
+    print(f'Number of odd numbers: {odd_count}')
