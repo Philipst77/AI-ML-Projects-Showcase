@@ -56,3 +56,16 @@ plt.xlabel('Reconstruction Error')
 plt.ylabel('Frequency')
 plt.legend()
 plt.show()
+
+import matplotlib.pyplot as plt
+
+# Plot training & validation loss values
+plt.figure(figsize=(6, 4))
+plt.plot(history.history['loss'], label='Training Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.title('Training Loss Evolution')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.legend()
+plt.grid(True)
+plt.show()
