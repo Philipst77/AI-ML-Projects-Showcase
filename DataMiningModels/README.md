@@ -36,6 +36,3 @@ The repo includes a wide variety of classic and modern ML models/techniques:
 - Includes both **traditional ML** and **deep learning** models  
 - Provides code for **regularization, model evaluation, and cross-validation**
 
----
-## 📜 License
-This project is open-source and available under the MIT License.
