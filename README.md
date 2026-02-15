@@ -1,97 +1,121 @@
-# 🧠 Machine Learning & AI Projects Repository  
+# Machine Learning & Artificial Intelligence Projects
 
-This repository is a collection of diverse **machine learning and artificial intelligence projects** designed to showcase both fundamental algorithms and practical real-world applications.  
-Each subdirectory is a self-contained project with its own focus, implementation, and documentation.  
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
-
-## 📂 Repository Structure  
-
-### 1. **DataMiningModels**  
-A collection of classic and modern machine learning and data mining algorithms implemented for experimentation and learning.  
-Includes **supervised, unsupervised, and deep learning techniques**.  
-
-**Key Implementations:**  
-- A-Priori (Market Basket Analysis)  
-- Anomaly Detection (Local Outlier Factor, Autoencoders)  
-- Artificial Neural Networks (feedforward, dropout, early stopping)  
-- AutoEncoder (dimensionality reduction, anomaly detection)  
-- Bias-Variance Tradeoff, OLS/WLS regression  
-- Classification with Imbalanced Datasets  
-- Decision Trees & Hierarchical Clustering  
-- K-NN with Cross Validation  
-- Kernel K-Means Clustering  
-- LDA (Latent Dirichlet Allocation for topic modeling)  
-- Linear Regression with L1/L2 regularization  
-- Singular Value Decomposition (SVD)  
-- Support Vector Machines (SVM)  
-
-**Highlights:**  
-- Covers both **traditional ML** and **deep learning**  
-- Focus on **clarity and educational value**  
-- Includes **visualizations** like dendrograms, heatmaps, and confusion matrices  
+A curated collection of machine learning and artificial intelligence implementations covering classical statistical models, modern deep learning architectures, and applied real-world systems. Each subdirectory represents a self-contained project focused on algorithmic foundations, experimental analysis, and performance evaluation.
 
 ---
 
-### 2. **FacialRecognitionProject**  
-A **real-time facial recognition system** built with deep learning models.  
-Combines **OpenCV** for video processing and **DeepFace / FaceNet** for face verification.  
+## Overview
 
-**Features:**  
-- Real-time facial recognition using webcam/video feed  
-- Cosine similarity for identity verification  
-- Threshold tuning for robust performance  
-- Multithreading for efficient video frame processing  
-- Extensible design for secure identification applications  
+This repository consolidates projects spanning supervised learning, unsupervised learning, optimization, anomaly detection, neural networks, and applied computer vision. The implementations emphasize conceptual clarity, mathematical grounding, and from-scratch development where appropriate.
 
-**Tech Stack:**  
-- Python, OpenCV, DeepFace, TensorFlow/Keras  
-- Multithreading for performance  
-- Developed and tested in a Linux environment  
+The collection serves as both a learning framework and a demonstration of practical model implementation across multiple domains.
 
 ---
 
-### 3. **LinearRegressionProject** – *Netflix Stock Prediction*  
-Applies **linear regression** to predict **Netflix stock closing prices** from historical trading data.  
-Includes both a **closed-form regression solution** and a **custom gradient descent algorithm**.  
+## Repository Structure
 
-**Features:**  
-- Predict Netflix’s stock closing prices using trading volume  
-- Gradient Descent implementation for iterative optimization  
-- Graphical visualization of regression performance  
-- Experimentation with learning rates & epochs  
+### DataMiningModels
 
-**Tech Stack:**  
-- Python, pandas, matplotlib  
-- Linear Regression & Gradient Descent  
+A comprehensive set of classical and modern machine learning algorithms implemented for experimentation and analytical study.
 
-⚠️ **Note:** This project is for **educational purposes only**, not financial advice.  
+**Core Areas Covered**
 
----
+- Association Rule Mining (Apriori)
+- Anomaly Detection (Local Outlier Factor, Autoencoders)
+- Artificial Neural Networks with dropout and early stopping
+- Dimensionality Reduction (SVD)
+- Linear and Regularized Regression (L1/L2)
+- Support Vector Machines
+- K-Nearest Neighbors with Cross Validation
+- Kernel K-Means
+- Hierarchical Clustering
+- Latent Dirichlet Allocation (Topic Modeling)
+- Imbalanced Dataset Classification
+- Bias–Variance Analysis and OLS/WLS Regression
 
-### 4. **NeuralNetwork** – *MNIST Digit Classification from Scratch*  
-Implements a **two-layer fully connected neural network** from scratch to classify handwritten digits (MNIST dataset).  
-No pre-built deep learning libraries — all **forward/backpropagation and optimization** done manually.  
-
-**Features:**  
-- ReLU activation for hidden layers, Softmax for outputs  
-- Manual implementation of forward and backward propagation  
-- Gradient Descent optimization with learning rate decay  
-- Confusion matrix & per-class accuracy evaluation  
-- Misclassified digit visualization  
-
-**Tech Stack:**  
-- Python, NumPy, pandas  
-- Matplotlib & Seaborn for visualizations  
-- Scikit-Learn for evaluation metrics  
+The implementations include visual diagnostics such as confusion matrices, dendrograms, clustering heatmaps, and regression plots.
 
 ---
 
+### FacialRecognitionProject
 
+A real-time facial recognition system integrating deep learning–based face embeddings with live video processing.
 
-## 📌 Getting Started  
+**Core Components**
 
-Clone the repository:  
+- Real-time webcam-based inference
+- DeepFace / FaceNet embedding extraction
+- Cosine similarity–based identity verification
+- Adjustable decision thresholds
+- Multithreaded frame processing for improved throughput
+
+**Technology Stack**
+
+- Python
+- OpenCV
+- DeepFace / TensorFlow / Keras
+- Multithreading for performance optimization
+
+---
+
+### LinearRegressionProject – Netflix Stock Modeling
+
+A regression-based modeling project exploring predictive relationships between trading volume and closing price for Netflix stock.
+
+**Implemented Approaches**
+
+- Closed-form Ordinary Least Squares solution
+- Custom Gradient Descent optimization
+- Learning rate and epoch experimentation
+- Regression visualization and error analysis
+
+**Tools**
+
+- Python
+- pandas
+- matplotlib
+
+This project is intended strictly for educational experimentation.
+
+---
+
+### NeuralNetwork – MNIST Classification from Scratch
+
+A two-layer fully connected neural network implemented from first principles to classify handwritten digits from the MNIST dataset.
+
+**Implementation Details**
+
+- ReLU activation for hidden layers
+- Softmax output layer
+- Manual forward propagation
+- Manual backpropagation
+- Gradient descent with learning rate scheduling
+- Per-class accuracy metrics and confusion matrix visualization
+
+No high-level deep learning frameworks are used for training logic; core operations are implemented using NumPy.
+
+---
+
+## Design Principles
+
+- Emphasis on algorithmic transparency
+- Manual implementation where feasible
+- Clear experimental evaluation
+- Modular project separation
+- Strong focus on mathematical understanding
+
+---
+
+## Getting Started
+
+Clone the repository:
+
 ```bash
 git clone https://github.com/Philipst77/ML-AI-Projects.git
 cd ML-AI-Projects
+```
+
+Each subdirectory contains project-specific instructions and dependencies.
