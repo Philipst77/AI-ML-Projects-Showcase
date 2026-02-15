@@ -87,19 +87,7 @@ No pre-built deep learning libraries — all **forward/backpropagation and optim
 
 ---
 
-## 🚀 Why This Repository?  
 
-This repository demonstrates a **broad spectrum of AI/ML techniques**:  
-- **From scratch implementations** → Build neural networks and optimization routines manually  
-- **Classic ML algorithms** → Regression, clustering, topic modeling, SVMs, etc.  
-- **Practical applications** → Stock prediction & real-time facial recognition  
-
-It is structured as a **learning showcase** for:  
-- Students studying machine learning and AI  
-- Developers building end-to-end applied ML systems  
-- Interview and portfolio preparation  
-
----
 
 ## 📌 Getting Started  
 
